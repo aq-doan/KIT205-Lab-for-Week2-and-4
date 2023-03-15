@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KIT101 Lab for Week2 and 4", "KIT101 Lab for Week2 and 4.vcxproj", "{F8909752-0D97-4EBB-9B46-E568FF7BAA6A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KIT205 Lab for Week2 and 4", "KIT101 Lab for Week2 and 4.vcxproj", "{F8909752-0D97-4EBB-9B46-E568FF7BAA6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
