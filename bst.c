@@ -149,7 +149,24 @@ void print_post_order_bst(BST* self) {
 	print_post_order_bst_node(self->root);
 }
 
-// recursive function to detroy all node
+//recursive function to calculate the bst height and return it as an integer (private)
+int height_bst_node(BSTNodePtr self) {
+	int height = 0;
+	if (self == NULL) { //the terminating case
+		height = 0;
+	}
+	else {
+		height = 1 + (height_bst_node(self->left) > height_bst_node(self->right) ? height_bst_node(self->left) : height_bst_node(self->right));
+	}
+	return height;
+}
+
+//Public function of height 
+int height_bst(BST* self) {
+	return height_bst_node(self->root);
+}
+
+// recursive function to destroy all node
 void destroy_bst_node(BSTNodePtr self) {
 	if (self != NULL) {
 		destroy_bst_node(self->left);
@@ -180,6 +197,23 @@ void bst_test() {
 			quit = 1;
 		}
 	}
+	//test in-order
+	printf("Test in-order:\n");
 	print_in_order_bst(&tree);
+	printf("\n");
+
+	//test pre-order
+	printf("Test pre-order:\n");
+	print_pre_order_bst(&tree);
+	printf("\n");
+
+	//test post-order
+	printf("Test post-order:\n");
+	print_post_order_bst(&tree);
+	printf("\n");
+
+	//test height()
+	printf("Test height:\n");
+	printf("%d",height_bst(&tree));
 	printf("\n");
 }

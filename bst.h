@@ -88,3 +88,8 @@ void print_pre_order_bst(BST* self);
 *@param self Points to the binary search tree to print
 */
 void print_pre_order_bst(BST * self); 
+
+/**
+* A function to calculate the height of a bst and return the height in integer
+*/
+int height_bst(BST* self);
